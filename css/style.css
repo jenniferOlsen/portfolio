@@ -1,11 +1,10 @@
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/C\:\/Users\/Jenny\/Desktop\/portfolio-home\/1-col-portfolio\/css\/style\.scss;
-  }
+body {
+  margin-top: 50px;
+  /*50px is the height of the navbar - change this if the navbarn height changes */
+}
 
-  line {
-    font-family: \000035;
-  }
+footer {
+  margin: 50px 0;
 }
 
 .img-responsive {

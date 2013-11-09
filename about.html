@@ -1,0 +1,141 @@
+<?php include "php/contact.php" ?>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Jennifer Olsen | About Me</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">About</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Portfolio</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav>
+
+    <div class="container">
+         <div class="col-lg-12">
+          <h1 class="page-header">Jennifer Olsen <small> About Me</small></h1>
+        </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <ul class="media-list">
+            <li class="media">
+              <a class="pull-left" href="#">
+                <img class="media-object" data-src="holder.js/64x64">
+              </a>
+              <div class="media-body">
+                <h4 class="media-heading">Media heading</h4>
+              </div>
+            </li>
+          </ul>      
+        </div>
+      </div>
+       <div class="row">
+      <div class="col-md-6 col-md-push-3">
+        <form role="form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" id="contactform">
+          <fieldset>
+            <legend>Send me a Message</legend>
+
+            <?php if(isset($hasError)) { //If errors are found ?>
+              <p class="alert alert-danger">Please check if you've filled all the fields with valid information and try again. Thank you.</p>
+            <?php } ?>
+
+            <?php if(isset($emailSent) && $emailSent == true) { //If email is sent ?>
+              <div class="alert alert-success">
+                <p><strong>Message Successfully Sent!</strong></p>
+                <p>Thank you for using my contact form, <strong><?php echo $name;?></strong>! Your email was successfully sent and I&rsquo;ll be in touch with you soon.</p>
+              </div>
+            <?php } ?>
+
+            <div class="form-group">
+              <label for="name">Your Name<span class="help-required">*</span></label>
+              <input type="text" name="contactname" id="contactname" value="" class="form-control required" role="input" aria-required="true" />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Your Phone Number<span class="help-required"></span></label>
+              <input type="text" name="phone" id="phone" value="" class="form-control" role="input" aria-required="false" />
+            </div>
+
+
+            <div class="form-group">
+              <label for="email">Your Email<span class="help-required">*</span></label>
+              <input type="text" name="email" id="email" value="" class="form-control required email" role="input" aria-required="true" />
+            </div>
+
+            <div class="form-group">
+              <label for="weburl">Your Website<span class="help-required"></span></label>
+              <input type="text" name="weburl" id="weburl" value="" class="form-control url" role="input" aria-required="false" />
+            </div>
+
+
+            <div class="form-group">
+              <label for="subject">Subject<span class="help-required">*</span></label>
+              <input type="text" name="subject" id="subject" value="" class="form-control required" role="input" aria-required="true" />
+                
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message<span class="help-required"></span></label>
+              <textarea rows="8" name="message" id="message" class="form-control" role="textbox" aria-required="false"></textarea>
+            </div>
+
+            <div class="actions">
+              <input type="submit" value="Send Your Message" name="submit" id="submitButton" class="btn btn-primary" title="Click here to submit your message!" />
+              <input type="reset" value="Clear Form" class="btn btn-danger" title="Remove all the data from the form." />
+            </div>
+          </fieldset>
+        </form>
+      </div><!-- col -->
+    </div><!-- row -->  
+   
+   <hr>
+
+      <footer>
+        <div class="row">
+          <div class="col-lg-12">
+            <p>Copyright &copy; 2013 &middot; Jennifer Olsen &middot; <a href="mailto:jenny@ninthdaydesign.com">Email</a>  &middot; <a href="http://www.linkedin.com/pub/jennifer-olsen/4b/785/957">LinkedIn</a> &middot; <a href="https://github.com/jenniferOlsen">GitHub</a></p>
+          </div>
+        </div>
+      </footer>
+
+    </div><!-- /.container -->
+
+    <!-- Bootstrap core JavaScript -->
+    
+    <script src="js/min/jquery.min.js"></script>
+    <script src="js/min/bootstrap.min.js"></script>
+    <script src="http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.pack.js"></script>
+    <script src="js/min/bootstrap-contact.min.js"></script>
+
+  </body>
+</html>
