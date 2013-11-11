@@ -1,0 +1,121 @@
+@import 'bourbon';
+
+/* Colors */
+/* Gumdrop scheme */
+$yellow: #fffb7f;
+$green: #7bf2ad; 
+$orange: #fca14b;
+$purple: #988dc7;
+$gray: #d5d9d9; 
+$red: #ed536f;
+
+/* other colors */
+$black: #333;
+
+/* Gumdrops 2 */
+/*$yellow: #f2e768; 
+$green: #aee8cd; 
+$purple: #ba63bd; 
+$gray: #e5e5e8;  
+$red: #fc8365; 
+-- softer, but red is no good */
+
+/* Loli */
+/*$yellow: #FAFD7C;
+$gray: #E8D2DE;
+$green: #75E696;
+$purple: #995FC3;
+$blue: #160D42; 
+ -- background is bad*/
+
+/* Typography */
+h1,h2,h3,h4,h5,h6 {
+  
+}
+
+body {
+  margin-top: 50px;  /*50px is the height of the navbar - change this if the navbarn height changes */
+  background-color: $gray; 
+}
+
+footer {
+  margin: 50px 0;
+}
+
+.img-responsive {
+  border: solid 2px $gray;
+  //padding: 3px;
+  box-shadow: 0px 0px 10px 10px $yellow;
+}
+
+.navbar {
+  background-color: $purple;
+  border-color: $purple;
+  .current {
+    color: #fff !important;
+  }
+}
+
+.navbar-brand {
+  color: $black !important;
+}
+
+.desc {
+  float: right;
+}
+
+.contact {
+  margin-top: 50px;
+  .alert {
+    //display: none; //testing
+  }
+  .alert-danger {
+    background-color: $red;
+    border-color: $red;
+    color: #fff;
+  }
+  .alert-success {
+    background-color: $green;
+    border-color: $green;
+    color: $black;
+  }
+  .btn-danger {
+    background-color: $red;
+    border-color: $red;
+    color: #fff;
+    &:hover {
+      background-color: $yellow;
+      border-color: $yellow;
+      color: $black;
+    }
+  }
+} //end contact styles  
+
+
+.btn-primary {
+  background-color: $purple;
+  border-color: $purple;
+  &:hover {
+    background-color: $orange;
+    border-color: $orange;
+  }
+}
+
+h1, h3 {
+  color: $red;
+}
+
+h4 {
+  color: $black;
+}
+
+h1 small {
+  color: $black;
+}
+
+a {
+  color: $purple;
+  &:hover {
+    color: $orange;
+  }
+}
