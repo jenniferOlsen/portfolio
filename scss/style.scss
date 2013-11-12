@@ -1,7 +1,7 @@
 @import 'bourbon';
 
 /* Colors */
-@import '_gumdrop.scss';
+@import '_gumdrop-alt.scss';
 
 /* other colors */
 $black: #333;
@@ -40,7 +40,7 @@ p {
 a {
   color: $purple;
   &:hover {
-    color: $orange;
+    color: $green;
   }
 }
 
@@ -58,8 +58,8 @@ a {
   border-color: $purple;
   font-family: $borgia;
   &:hover, &:focus {
-    background-color: $orange;
-    border-color: $orange;
+    background-color: $green;
+    border-color: $green;
   }
 }
 
@@ -68,12 +68,12 @@ a {
   background-color: $purple;
   border-color: $purple;
   .current {
-    color: #fff !important;
+    color: $yellow !important;
   }
 }
 
 .navbar-brand {
-  color: $black !important;
+  color: #fff !important;
   font-family: $borgia;
 }
 
@@ -91,7 +91,7 @@ a {
   .alert-success {
     background-color: $green;
     border-color: $green;
-    color: $black;
+    color: #fff;
   }
   .btn-danger {
     background-color: $red;
