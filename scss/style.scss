@@ -27,6 +27,10 @@ h2, h4 {
   font-family: $borgia;
 }
 
+h2 small {
+  color: $black;
+}
+
 h1 small {
   color: $black;
 }
@@ -122,3 +126,4 @@ hr {
   text-align: center;
   font-size: 1.4rem;
 }
+
